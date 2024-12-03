@@ -1,78 +1,59 @@
-h3,p {
-    margin: 0;
-}
-
-ul {
-    padding: 0;
-}
-
-body {
+body, textarea::placeholder {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-.container {
-    max-width: 400px;
-    border-radius: 10px;
-    padding: 50px;
-    margin: auto;
-    text-align: center;
-    background-color: #5e64a7;
+#lists {
+    margin-top: 30px;
 }
 
-#taskForm div {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    padding-bottom: 20px;
-}
-
-#addTask {
-    margin-top: 20px;
+#createList {
+    background-color: #333;
+    color: #fff;
     border: none;
-    background-color: #63b8eb;
+    border-radius: 10px;
+    padding: 15px 35px;
+    cursor: pointer;
     text-transform: uppercase;
     font-weight: bold;
-    color: #fff;
+}
+
+.taskList li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.taskList input, .taskList h3, .taskList p, .taskList button {
+    margin: 0 10px;
+}
+
+.list-container {
+    margin-bottom: 20px;
+    background: #e3e3e3;
     padding: 10px;
-    width: 200px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
 }
 
-#addTask:hover {
-    background-color: #61a9be;
+.completed {
+    text-decoration: line-through;
+    color: gray;
 }
 
-#taskForm input, #taskForm textarea{
-    font-family: "Roboto", sans-serif;
-    height: 30px;
-    background: none;
-    border: none;
-    border-bottom: 1px solid #fff;
+.completed-list {
+    color: #3ebb98;
 }
 
-#taskForm input::placeholder, #taskForm textarea::placeholder {
-    color: #c7c7c7;
-    font-family: "Roboto", sans-serif;
+.edit-btn {
+    background-color: #3ebb98;
 }
 
-#taskList li{
-    list-style-type: none;
-    margin-bottom: 30px;
+.delete-btn, .delete-list {
+    background-color: #f55b5b;
 }
 
-#taskList span {
-    display: block;
-}
-
-h3, p, span {
-    padding: 5px 10px;
-}
-
-.edit-btn, .delete-btn {
+.edit-btn, .delete-btn, .delete-list {
     margin: 0 15px;
     padding: 5px 35px;
     border: none;
@@ -83,18 +64,39 @@ h3, p, span {
     cursor: pointer;
 }
 
-.edit-btn {
+.taskForm {
+    display: flex;
+    align-items: center;
+}
+
+.taskForm button[type='submit'] {
     background-color: #3ebb98;
+    height: 40px;
+    color: #fff;
+    border: none;
+    padding: 5px 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.delete-btn {
-    background-color: #f55b5b;
+.taskForm input, .taskForm textarea {
+    font-family: "Roboto", sans-serif;
+    height: 30px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #cfcfcf;
+    margin: 10px 15px;
+    height: 40px;
+    padding: 0;
 }
 
-#taskList li.completed h3, #taskList li.completed p, #taskList li.completed span{
-    text-decoration: line-through;
+.taskForm textarea {
+    width: 400px;
 }
 
-h3 {
-    display: inline;
+.list-header {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
 }
